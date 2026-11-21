@@ -1,0 +1,25 @@
+2026-11-20 20:05:10 | INFO     | === INICIO DE SESIÓN DEL SISTEMA SOFTWARE FJ ===
+2026-11-20 20:05:10 | INFO     | Cliente registrado con éxito -> Cliente [CLI-01] | Nombre: Laura Mendoza | Doc: 1020456789 | Correo: laura.mendoza@correo.com
+2026-11-20 20:05:10 | INFO     | Cliente registrado con éxito -> Cliente [CLI-02] | Nombre: Carlos Ramírez | Doc: 80456123 | Correo: carlos.ramirez@empresa.co
+2026-11-20 20:05:10 | ERROR    | Fallo al registrar cliente (CLI-03): [ERR-DATO-001] El correo electrónico 'andres.gomez_sin_arroba.com' no tiene un formato válido.
+2026-11-20 20:05:10 | ERROR    | Fallo al registrar cliente (CLI-04): [ERR-OPER-003] Ya existe un cliente registrado con ID 'CLI-01' o documento '1020456789'.
+2026-11-20 20:05:10 | INFO     | Servicio agregado al catálogo -> Sala 'Sala Ejecutiva Norte' (ID: SRV-01, Capacidad: 25 personas) | Tarifa base: $80,000.00 | Estado: Disponible
+2026-11-20 20:05:10 | INFO     | Servicio agregado al catálogo -> Alquiler Equipo 'Workstations Dell Precision' (ID: SRV-02, Unidades: 4) | Tarifa base: $45,000.00 | Estado: Disponible
+2026-11-20 20:05:10 | INFO     | Servicio agregado al catálogo -> Asesoría en Cloud & DevOps: 'Arquitectura en la Nube' (ID: SRV-03) | Tarifa base: $120,000.00 | Estado: Disponible
+2026-11-20 20:05:10 | ERROR    | Excepción capturada al instanciar servicio inválido: [ERR-DATO-001] La tarifa base del servicio debe ser un número positivo mayor a 0.
+2026-11-20 20:05:10 | ERROR    | Excepción capturada por parámetro faltante en asesoría: [ERR-PARAM-002] Debe especificar el área de especialidad de la asesoría.
+2026-11-20 20:05:10 | INFO     | Reserva confirmada -> Reserva [RES-001] | Estado: CONFIRMADA | Cliente: Laura Mendoza | Servicio: Sala Ejecutiva Norte | Duración: 4 | Total: $437,920.00
+2026-11-20 20:05:10 | DEBUG    | Auditoría finalizada para intento de reserva 'RES-001' -> Estado: EXITOSA
+2026-11-20 20:05:10 | ERROR    | Error en operación de reserva 'RES-002': [ERR-RES-004] No fue posible procesar la reserva 'RES-002' para el servicio 'SRV-01'. | Causa original: [ERR-SERV-005] El servicio 'Sala Ejecutiva Norte' no se encuentra disponible actualmente.
+2026-11-20 20:05:10 | DEBUG    | Auditoría finalizada para intento de reserva 'RES-002' -> Estado: FALLIDA
+2026-11-20 20:05:10 | INFO     | Reserva confirmada -> Reserva [RES-003] | Estado: CONFIRMADA | Cliente: Carlos Ramírez | Servicio: Workstations Dell Precision | Duración: 3 | Total: $594,405.00
+2026-11-20 20:05:10 | DEBUG    | Auditoría finalizada para intento de reserva 'RES-003' -> Estado: EXITOSA
+2026-11-20 20:05:10 | ERROR    | Error en operación de reserva 'RES-004': [ERR-RES-004] No fue posible procesar la reserva 'RES-004' para el servicio 'SRV-03'. | Causa original: [ERR-RES-004] Toda asesoría especializada requiere un mínimo de 2 horas.
+2026-11-20 20:05:10 | DEBUG    | Auditoría finalizada para intento de reserva 'RES-004' -> Estado: FALLIDA
+2026-11-20 20:05:10 | ERROR    | Error en operación de reserva 'RES-005': [ERR-RES-004] No fue posible procesar la reserva 'RES-005' para el servicio 'SRV-03'. | Causa original: [ERR-CALC-006] El porcentaje de descuento (1.5) debe estar entre 0.0 y 0.99.
+2026-11-20 20:05:10 | DEBUG    | Auditoría finalizada para intento de reserva 'RES-005' -> Estado: FALLIDA
+2026-11-20 20:05:10 | INFO     | Reserva confirmada -> Reserva [RES-006] | Estado: CONFIRMADA | Cliente: Laura Mendoza | Servicio: Arquitectura en la Nube | Duración: 3 | Total: $406,980.00
+2026-11-20 20:05:10 | DEBUG    | Auditoría finalizada para intento de reserva 'RES-006' -> Estado: EXITOSA
+2026-11-20 20:05:10 | INFO     | Reserva cancelada correctamente -> Reserva [RES-001] | Estado: CANCELADA | Cliente: Laura Mendoza | Servicio: Sala Ejecutiva Norte | Duración: 4 | Total: $437,920.00
+2026-11-20 20:05:10 | INFO     | Reserva confirmada -> Reserva [RES-007] | Estado: CONFIRMADA | Cliente: Carlos Ramírez | Servicio: Sala Ejecutiva Norte | Duración: 5 | Total: $547,400.00
+2026-11-20 20:05:10 | DEBUG    | Auditoría finalizada para intento de reserva 'RES-007' -> Estado: EXITOSA
